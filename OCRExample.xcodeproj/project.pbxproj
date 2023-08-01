@@ -11,6 +11,7 @@
 		DE8EB8E32A6EAA5300991A19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8EB8E22A6EAA5300991A19 /* ContentView.swift */; };
 		DE8EB8E52A6EAA5400991A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8EB8E42A6EAA5400991A19 /* Assets.xcassets */; };
 		DE8EB8E82A6EAA5400991A19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8EB8E72A6EAA5400991A19 /* Preview Assets.xcassets */; };
+		DE8EB8F02A6EAA8B00991A19 /* ImageOCRUI in Frameworks */ = {isa = PBXBuildFile; productRef = DE8EB8EF2A6EAA8B00991A19 /* ImageOCRUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8EB8F02A6EAA8B00991A19 /* ImageOCRUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = OCRExample;
+			packageProductDependencies = (
+				DE8EB8EF2A6EAA8B00991A19 /* ImageOCRUI */,
+			);
 			productName = OCRExample;
 			productReference = DE8EB8DD2A6EAA5300991A19 /* OCRExample.app */;
 			productType = "com.apple.product-type.application";
@@ -104,13 +109,17 @@
 			};
 			buildConfigurationList = DE8EB8D82A6EAA5300991A19 /* Build configuration list for PBXProject "OCRExample" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = tr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = DE8EB8D42A6EAA5300991A19;
+			packageReferences = (
+				DE8EB8EE2A6EAA8B00991A19 /* XCRemoteSwiftPackageReference "ImageOCRUI" */,
+			);
 			productRefGroup = DE8EB8DE2A6EAA5300991A19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,11 +279,14 @@
 				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OCRExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires permission to access camera to scan photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +311,14 @@
 				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OCRExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires permission to access camera to scan photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE8EB8EE2A6EAA8B00991A19 /* XCRemoteSwiftPackageReference "ImageOCRUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fatihdurmaz/ImageOCRUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE8EB8EF2A6EAA8B00991A19 /* ImageOCRUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8EB8EE2A6EAA8B00991A19 /* XCRemoteSwiftPackageReference "ImageOCRUI" */;
+			productName = ImageOCRUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE8EB8D52A6EAA5300991A19 /* Project object */;
 }
